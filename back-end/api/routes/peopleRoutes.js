@@ -9,6 +9,11 @@ router
 .post('/people', PeopleController.post)
 .put('/people/:id', PeopleController.put)
 .delete('/people/:id', PeopleController.delete)
+.get('/people/:studentId/registration/:registrationId', PeopleController.getByRegistration)
+.post('/people/:studentId/registration', PeopleController.postRegistration)
+.put('/people/:studentId/registration/:registrationId', PeopleController.putRegistration)
+.delete('/people/:studentId/registration/:registrationId', PeopleController.deleteRegistration)
+
 
 
 module.exports = router;
