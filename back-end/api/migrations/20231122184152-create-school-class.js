@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('SchoolClasses', {
+    return queryInterface.createTable("SchoolClasses", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -14,12 +14,12 @@ module.exports = {
       teaching_id:{
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'People', key: 'id'}
+        references: { model: "People", key: "id"}
       },
       level_id:{
         allowNull: false,
         type: Sequelize.INTEGER,
-        references: { model: 'Level', key: 'id'}
+        references: { model: "Level", key: "id"}
       },
       createdAt: {
         allowNull: false,
@@ -32,6 +32,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('SchoolClasses');
+    return queryInterface.dropTable("SchoolClasses");
   }
 };

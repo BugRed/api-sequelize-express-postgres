@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 module.exports = (sequelize, DataTypes) => {
-  const People = sequelize.define('People', {
+  const People = sequelize.define("People", {
     name: DataTypes.STRING,
     active: DataTypes.BOOLEAN,
     email: DataTypes.STRING,
@@ -8,10 +8,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   People.associate = function(models) {
     People.hasMany(models.SchoolClass, {
-      foreignKey: 'teaching_id'
+      foreignKey: "teaching_id"
     });
     People.hasMany(models.Registration, {
-      foreignKey: 'student_id'
+      foreignKey: "student_id"
     });
   };
   return People;
